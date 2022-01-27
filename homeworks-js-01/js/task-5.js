@@ -1,26 +1,53 @@
 'use strict'
 
-const arrangeDelivery = prompt("В какую страну Вы бы хотели осуществить доставку?")
-const anyDelivery = arrangeDelivery.toLowerCase();
-const country = ["китай","чили","австралия","индия","ямайка"];
-const price = [100,250,170,80,120];
+let country;
+let price;
+let message = "Отменено пользователем";
+let isValid = true;
 
-switch (anyDelivery) {
+let userInput = prompt("В какую страну Вы бы хотели осуществить доставку?");
+if (userInput !== null) {
+  switch (userInput.toLowerCase()) {
     case "китай":
-        console.log(`Доставка в ${anyDelivery} будет стоить ${price} кредитов`);
-        break;
+      country = "Китай";
+      price = 100;
+      console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
+      break;
+
     case "чили":
-        console.log(`Доставка в ${anyDelivery} будет стоить ${price} кредитов`);
-        break;
+      country = "Чили";
+      price = 250;
+      console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
+      break;
+
     case "австралия":
-        console.log(`Доставка в ${anyDelivery} будет стоить ${price} кредитов`);
-        break;
+      country = "Австралию";
+      price = 170;
+      console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
+      break;
+
     case "индия":
-        console.log(`Доставка в ${anyDelivery} будет стоить ${price} кредитов`);
-        break;
+      country = "Индию";
+      price = 80;
+      console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
+      break;
+
     case "ямайка":
-        console.log(`Доставка в ${anyDelivery} будет стоить ${price} кредитов`);
-        break;
+      country = "Ямайку";
+      price = 120;
+      console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
+      break;
+
     default:
-        alert('В вашей стране доставка не доступна')
-};
+      isValid = false;
+      message = "В вашей стране доставка не доступна";
+  }
+} else {
+  isValid = false;
+}
+
+if (isValid) {
+  message = `Доставка в ${country} будет стоить ${price} кредитов`;
+}
+
+alert(message);
