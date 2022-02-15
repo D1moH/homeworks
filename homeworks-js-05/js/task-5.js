@@ -42,10 +42,6 @@ class Car {
         }
     }
 
-  /*
-   * Добавляет в поле distance киллометраж (hours * speed),
-   * но только в том случае если машина заведена!
-   */
     drive(hours) {
         if (this.turnOn) {
             this.distance += hours * this.speed;
