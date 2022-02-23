@@ -3,12 +3,13 @@
 const btnCreate = document.querySelector('[data-action="render"]');
 const btnClear = document.querySelector('[data-action="destroy"]');
 const boxesRef = document.querySelector('#boxes');
+const controlsRef = document.querySelector('#controls input');
 
 const destroyBoxes = () => boxesRef.innerHTML = '';
 const random = () => Math.floor(Math.random() * 256);
 
 const getAmount = amount => {
-    amount = document.querySelector("#controls input").value;
+    amount = controlsRef.value;
     createBoxes(amount);
 };
 
