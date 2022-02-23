@@ -1,9 +1,8 @@
 'use strict'
 
-import users from "./users.js";
+const controlRef = document.querySelector('#font-size-control');
+const textRef = document.querySelector('#text');
 
-const calculateTotalBalance = users => {
-    return users.reduce((sum, user) => sum + user.balance, null)
-};
-
-console.log(calculateTotalBalance(users)); // 20916
+controlRef.addEventListener('input', () => {
+    textRef.style.fontSize = `${controlRef.value}px`;
+})

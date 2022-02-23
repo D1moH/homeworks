@@ -1,12 +1,8 @@
 'use strict'
 
-import users from "./users.js";
+const inputRef = document.querySelector('#name-input');
+const outputRef = document.querySelector('#name-output');
 
-// const getUserWithEmail = (users, email) => {
-//     return users.find(user => user.email === email)
-// };
-
-const getUserWithEmail = (users, email) => users.find(user => user.email === email);
-
-console.table(getUserWithEmail(users, 'shereeanthony@kog.com')); // {объект пользователя Sheree Anthony}
-console.table(getUserWithEmail(users, 'elmahead@omatom.com')); // {объект пользователя Elma Head}
+inputRef.addEventListener('input', event => {
+    outputRef.textContent = event.target.value ? event.target.value : "незнакомец";
+})

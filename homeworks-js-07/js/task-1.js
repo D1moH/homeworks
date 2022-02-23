@@ -1,12 +1,16 @@
 'use strict'
 
-import users from "./users.js";
+const listRef = document.querySelector('#categories');
+const itemsRef = listRef.querySelectorAll('.item');
 
-// const getUserNames = users => {
-//   return users.map(user => user.name)
-// };
+console.log(`В списке ${itemsRef.length} категории.`);
 
-const getUserNames = users => users.map(user => user.name);
+itemsRef.forEach((item) => {
+    const title = item.querySelector('h2');
+    const elements = item.querySelectorAll('li');
 
-console.table(getUserNames(users));
-// [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
+    console.log(
+        `Категория: ${title.textContent} 
+Количество элементов: ${elements.length}`);
+});
+

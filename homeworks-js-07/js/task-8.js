@@ -1,12 +1,29 @@
 'use strict'
 
-import users from "./users.js";
+const btnCreate = document.querySelector('[data-action="render"]');
+const btnClear = document.querySelector('[data-action="destroy"]');
+const boxesRef = document.querySelector('#boxes');
 
-const getUsersWithFriend = (users, friendName) => {
-    return users.filter(user => user.friends.includes(friendName))
+const destroyBoxes = () => boxesRef.innerHTML = '';
+const random = () => Math.floor(Math.random() * 256);
+
+const getAmount = amount => {
+    amount = document.querySelector("#controls input").value;
+    createBoxes(amount);
 };
 
-console.table(getUsersWithFriend(users, 'Briana Decker'));
-// [ 'Sharlene Bush', 'Sheree Anthony' ]
-console.table(getUsersWithFriend(users, 'Goldie Gentry'));
-// [ 'Elma Head', 'Sheree Anthony' ]
+const createBoxes = (amount) => {
+    let basicSize = 30;
+    let fragment = document.createDocumentFragment();
+    for (let i = 0; i < amount; i++) {
+        let size = basicSize + i * 10;
+        const createBox = document.createElement('div')
+        createBox.className = 'color';
+        createBox.style.cssText = `width: ${size}px; height: ${size}px; background-color: rgba( ${random()} , ${random()} , ${random()} )`;
+        fragment.appendChild(createBox);
+    }
+    boxesRef.appendChild(fragment);
+};
+
+btnCreate.addEventListener('click', getAmount);
+btnClear.addEventListener('click', destroyBoxes);

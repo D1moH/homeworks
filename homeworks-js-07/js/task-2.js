@@ -1,11 +1,20 @@
 'use strict'
 
-import users from "./users.js";
+const ingredients = [
+  'Картошка',
+  'Грибы',
+  'Чеснок',
+  'Помидоры',
+  'Зелень',
+  'Приправы',
+];
 
-// const getUsersWithEyeColor = (users, color) => {
-//     return users.filter(user => user.eyeColor === color)
-// };
+const ingredientsListRef = document.querySelector("#ingredients");
 
-const getUsersWithEyeColor = (users, color) => users.filter(user => user.eyeColor === color)
+const addedItems = ingredients.map((item) => {
+  const itemRef = document.createElement("li");
+  itemRef.textContent = item;
+  return itemRef;
+});
 
-console.table(getUsersWithEyeColor(users, 'blue')); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
+ingredientsListRef.append(...addedItems);

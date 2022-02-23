@@ -1,11 +1,19 @@
 'use strict'
+ 
+let counterValue = 0;
+const addRef = document.querySelector('#counter button[data-action="increment"]');
+const removeRef = document.querySelector('#counter button[data-action="decrement"]');
+const valueRef = document.querySelector('#value');
 
-import users from "./users.js";
+const increment = () => {
+    counterValue += 1;
+    return (valueRef.textContent = counterValue);
+};
 
-// const getInactiveUsers = users => {
-//     return users.filter(user => !user.isActive)
-// };
+const decrement = () => {
+    counterValue -= 1;
+    return (valueRef.textContent = counterValue);
+};
 
-const getInactiveUsers = users => users.filter(user => !user.isActive);
-
-console.table(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
+addRef.addEventListener('click', increment);
+removeRef.addEventListener('click', decrement);
