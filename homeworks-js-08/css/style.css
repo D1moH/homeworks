@@ -143,20 +143,32 @@ body {
 
 .lightbox__left {
   position: absolute;
-  top: 50%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background-color: grey;
+  opacity: 0.1;
   cursor: pointer;
-  max-width: 4vw;
-  max-height: 20vh;
-  left: 1%;
-  opacity: 30%;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.lightbox__left:hover {
+  opacity: 0.6;
 }
 
 .lightbox__right {
   position: absolute;
-  top: 50%;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background-color: grey;
+  opacity: 0.1;
   cursor: pointer;
-  max-width: 4vw;
-  max-height: 20vh;
-  right: 1%;
-  opacity: 30%;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.lightbox__right:hover {
+  opacity: 0.6;
 }
