@@ -1,0 +1,20 @@
+{
+  "name": "homeworks-js-08",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D1moH/homeworks.git#main"
+  },
+  "author": "D1moH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/D1moH/homeworks/issues"
+  },
+  "homepage": "https://github.com/D1moH/homeworks/tree/main#readme"
+}
