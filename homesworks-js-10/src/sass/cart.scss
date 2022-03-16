@@ -1,0 +1,19 @@
+#cart {
+  height: 36px;
+  width: 36px;
+  margin-right: 8px;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#value {
+  text-align: center;
+  width: 38px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  font-size: 25px;
+  font-weight: bold;
+  color: red;
+}

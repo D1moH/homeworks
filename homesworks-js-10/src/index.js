@@ -1,2 +1,4 @@
-import './sass/main.scss';
-import './js/menu'
+import './js/theme';
+import './js/templating';
+import './sass/main';
+import './js/button';
