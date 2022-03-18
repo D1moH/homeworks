@@ -24,8 +24,8 @@ function countdownTimer(time) {
     const secs = pad(Math.floor((time % (1000 * 60)) / 1000));
 
     refs.days.textContent = `${days}`
-    refs.hours.textContent = `${hours}`
-    refs.mins.textContent = `${mins}`
+    refs.hours.textContent = `${hours}:`
+    refs.mins.textContent = `${mins}:`
     refs.secs.textContent = `${secs}`
 }
 
