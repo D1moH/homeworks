@@ -1,0 +1,37 @@
+.timer {
+  align-items: center;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(27, 211, 218);
+}
+.field {
+  width: 200px;
+  height: 200px;
+  font-size: 100px;
+  align-items: center;
+  text-align: center;
+  display: table-cell;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 0 5px rgba(71, 20, 255, 0.904);
+}
+.label {
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 50px;
+}
+.timer-btn {
+  cursor: pointer;
+  box-shadow: 0 0 5px #000;
+  border-radius: 15px;
+  background-color: rgb(0, 255, 0);
+  font-size: 50px;
+}
+
+.actions {
+  text-align: center;
+}
