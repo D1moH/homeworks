@@ -1,4 +1,4 @@
-import galleryItems from "/homeworks-js-08/js/gallery-items.js";
+import galleryItems from "/js/gallery-items.js";
 
 const refs = {
     gallery: document.querySelector('.gallery'),
